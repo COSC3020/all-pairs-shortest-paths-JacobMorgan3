@@ -1,3 +1,4 @@
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/2i4vCRmk)
 # All Pairs Shortest Paths
 
 In the lectures, we've seen Dijkstra's algorithm for finding the shortest paths
@@ -28,3 +29,6 @@ the function and run automatically when you commit through a GitHub action.
 
 What is the worst-case time complexity ($\Theta$) of the algorithm? Add your
 answer, including your reasoning, to this markdown file.
+
+### Analysis
+My function begins with two for loops, one nested in the other. These go through and set all dist between edges to Infinity, it does this by looping through the the number of vertices for each for loop. so $V^2$ I then have one for loop that sets the dist from a node to itself to 0, it loops over the length of the graph, the number of vertices, so $V$. I end with 3 for loops, all nested, each loops over the length of the matrix dist, so V for each. Since they are nested it is $V^3$. Over all, we have $V^2 + V + V^3$ and since $V^2$ and $V$ are of a lessor order we won't consider them when looking at the time complexity. We end with a worst case complexity of $\Theta(V^3)$
