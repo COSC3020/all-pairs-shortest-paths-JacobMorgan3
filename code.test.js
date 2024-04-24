@@ -58,11 +58,20 @@ assert(arrayEqual(a,b));
 
 /////// Test 3 //////////////////////////
 
+graph = [  [0,3,0,5],    //example graph on https://blog.devgenius.io/floyd-warshall-algorithm-f004a01ae40e
+           [2,0,0,4],
+           [0,1,0,0],
+           [0,0,2,0]  ];
+
+
 a = code.allPairsShortestPaths(graph);
-b = [10,0,1,14,9,2,6,5]; //worked the answer by hand
+b = [  [0,3,7,5], //answer from https://blog.devgenius.io/floyd-warshall-algorithm-f004a01ae40e 
+       [2,0,6,4],
+       [3,1,0,5],
+       [5,3,2,0]  ]; 
 
 //Test
-//assert(arrayEqual(a,b));
+assert(arrayEqual(a,b));
 
 
 
