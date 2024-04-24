@@ -12,18 +12,38 @@ function allPairsShortestPaths(graph) {
     for (let i = 0; i < dist.length; i++) { //set dist to self to 0
         dist[i][i] = 0;
     }
-    
-    
-    
-    
-    
+    //console.log(dist);
+    //console.log("break");
+    for (let i = 0; i < graph.length; i++) { //set dist equal to weight of edges if edge exists
+        for (let j = 0; j < graph.length; j++) {
+            if (graph[i][j] != 0) { //if edge exists
+                //console.log(graph[i][j][1]);
+                dist[i][j] = graph[i][j];
+            }
+        }
+    }
+    for (let k = 0; k < dist.length; k++) {
+        for (let i = 0; i < dist.length; i++) {
+            for (let j = 0; j < dist.length; j++) {
+                if (dist[i][j] > dist[i][k] + dist[k][j])
+                    dist[i][j] = dist[i][k] + dist[k][j];
+            }
+        }
+    }
     return dist;
 }
 
-
-graph = [  [0,1,0],
-           [1,0,0],
-           [1,1,0]  ]; 
+/*
+//graph from the dijkstra's example in lectures
+let graph = [   [0,2,1,4,0,0,0,0],
+                [0,0,1,0,10,2,0,0],
+                [9,0,0,0,8,0,0,0],
+                [0,0,2,0,0,0,0,0],
+                [0,0,0,7,0,0,1,0],
+                [0,0,0,0,0,0,0,3],
+                [0,0,0,0,4,2,0,0],
+                [0,0,0,0,0,0,1,0]   ]         
+*/         
           
 
-console.log(allPairsShortestPaths(graph))
+//console.log(allPairsShortestPaths(graph))
