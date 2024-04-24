@@ -48,3 +48,8 @@ let graph = [   [0,2,1,4,0,0,0,0],
           
 
 //console.log(allPairsShortestPaths(graph))
+
+
+
+//add so i can test functions
+module.exports = {allPairsShortestPaths};
