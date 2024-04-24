@@ -1,3 +1,4 @@
+//followed algorithm steps when writing my function and used visual example on: https://blog.devgenius.io/floyd-warshall-algorithm-f004a01ae40e  to work through the problem and confirm I was doing it correctly
 function allPairsShortestPaths(graph) {
     let vertices = graph.length;
     //console.log(vertices);
