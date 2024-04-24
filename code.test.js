@@ -17,7 +17,14 @@ let graph = [   [0,0,0,0,0,0,0,0],
                 [0,0,0,0,0,0,0,0]   ];
 
 let a = code.allPairsShortestPaths(graph);
-let b = [0,0,0,0,0,0,0,0]; 
+let b = [ [0,Infinity,Infinity,Infinity,Infinity,Infinity,Infinity,Infinity], //since there is no edge between different node, every dist is set to Infinity, other than the edge to itself 
+          [Infinity,0,Infinity,Infinity,Infinity,Infinity,Infinity,Infinity],
+          [Infinity,Infinity,0,Infinity,Infinity,Infinity,Infinity,Infinity],
+          [Infinity,Infinity,Infinity,0,Infinity,Infinity,Infinity,Infinity],
+          [Infinity,Infinity,Infinity,Infinity,0,Infinity,Infinity,Infinity],
+          [Infinity,Infinity,Infinity,Infinity,Infinity,0,Infinity,Infinity],
+          [Infinity,Infinity,Infinity,Infinity,Infinity,Infinity,0,Infinity],
+          [Infinity,Infinity,Infinity,Infinity,Infinity,Infinity,Infinity,0] ]; 
 
 
 /////// Test 1 ////////////////////////// when input graph has no edges, should produce a graph of zeros that is the same size as input 
